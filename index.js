@@ -11,7 +11,7 @@ require('./routes/authRoutes')(app);
 
 
 app.get('/', (req, res) => {
-    res.send({boy: 'bye'})
+    res.send({boy: 'bye bye bye'})
 })
 
 const PORT = process.env.PORT || 5000;
