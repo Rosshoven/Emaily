@@ -2,10 +2,14 @@
 // import express from 'express';  
 const express = require('express');
 const app = express();
+// passport gives express the idea of how to handle authentication
+const passport = require('passport');
+// Strategy instructs passport on how to autghenticate our users with oauth
+const GoogleStrategy = require('passport-google-oauth20').Strategy;
 
-app.get('/', (req, res) => {
-    res.send({ bye: 'mon frere' });
-});
+
+// New instance of the google passport strategy
+passport.use(new GoogleStrategy());
 
 
 const PORT = process.env.PORT || 5000;
