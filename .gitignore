@@ -1,2 +1,4 @@
 # when saving to git don't take these
 node_modules
+
+keys.js
